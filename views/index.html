@@ -1,0 +1,65 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/public/index.js"></script>
+</head>
+<body>
+    <form action="/setname" method="post" id="name" onsubmit="javascript:return setname();">
+        <a>Your name: </a>
+        <br>
+        <input type="text" name="name" id="input_name">
+        <input type="submit" value="Set/Reset name">
+    </form>
+    <form action="/" method="post" id="questions" onsubmit="javascript:return sub();">
+        <table cellspacing="10px">
+            <tr>
+                <td>Relative position in billboard</td>
+                <td>Your guess</td>
+                <td>Actual position</td>
+                <td>Result</td>
+            </tr>
+            <tr>
+                <td class="rank"><label for="t1">Rank1: </label></td>
+                <td class="choice"><select name="t1">
+                    <option class="slot1" value="" selected></option>
+                    <option class="slot2" value=""></option>
+                    <option class="slot3" value=""></option>
+                    </select>
+                </td>
+                <td class="actual"></td>
+                <td class="result"></td>
+            </tr>
+            <tr>
+                <td class="rank"><label for="t2">Rank2: </label></td>
+                <td class="choice"><select name="t2">
+                    <option class="slot1" value=""></option>
+                    <option class="slot2" value="" selected></option>
+                    <option class="slot3" value=""></option>
+                    </select>
+                </td>
+                <td class="actual"></td>
+                <td class="result"></td>
+            </tr>
+            <tr>
+                <td class="rank"><label for="t3">Rank3: </label></td>
+                <td class="choice"><select name="t3">
+                    <option class="slot1" value=""></option>
+                    <option class="slot2" value=""></option>
+                    <option class="slot3" value="" selected></option>
+                    </select>
+                </td>
+                <td class="actual"></td>
+                <td class="result"></td>
+            </tr>
+            <tr>
+                <td colspan=3>
+                    <button type="button" id="restart" onclick="resetQuestion()">Restart</button>
+                    <button type="submit">Submit</button>
+                    <a href="./statistic"><button type="button" id="statistics">Statistics</button></a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+
+    
